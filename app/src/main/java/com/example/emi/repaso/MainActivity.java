@@ -58,7 +58,14 @@ public class MainActivity extends AppCompatActivity {
                     //Log.d(addText, "PROBLEMA 3");//PROBLEMA 3.4: Imprimimos por consola con el Log, dándole el nombre de la variable.
                     //Log.d("PROBLEMA 2", "El botón ha sido pulsado");
 
-                    Snackbar.make(editText,"texto cortico",Snackbar.LENGTH_LONG ).show();//PROBLEMA 6: Mostrar SnackBar
+
+                    if (editText.getText().toString().equals("")){
+                        Snackbar.make(editText,"texto vacio",Snackbar.LENGTH_LONG ).show();
+                    }else{
+                        Snackbar.make(editText,"texto cortico",Snackbar.LENGTH_LONG ).show();
+                    }
+
+                    //PROBLEMA 6: Mostrar SnackBar
                     imageView.setVisibility(View.GONE);//PROBLEMA 7: Hacer invisible una imagen al pulsar el botón
 
                 }
